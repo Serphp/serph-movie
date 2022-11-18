@@ -2,28 +2,22 @@ html,
 
 .container2{
   width: 100%;
-  max-width: 940px;
+  max-width: 120%;
   margin-right: auto;
   margin-left: auto;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav {
   width: 100%;
   font-weight: bold;
-  
   letter-spacing: 0.025em;
 }
-
-/*
-* {
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Rubik';
-}
-a {
-  all: unset;
-}
-*/
 
 
 
@@ -46,11 +40,7 @@ a {
   background-color: var(--primary-color);
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 
 .movie {
   width: 300px;
@@ -62,41 +52,8 @@ main {
   border-radius: 3px;
 }
 
-.movie img {
-  width: 100%;
-}
-
-.movie-info {
-  color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap:0.2rem;
-  padding: 0.5rem 1rem 1rem;
-  letter-spacing: 0.5px;
-}
-
-.movie-info h3 {
-  margin-top: 0;
-}
-
-.movie-info span {
-  background-color: var(--primary-color);
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
-  font-weight: bold;
-}
-
-.movie-info span.green {
-  color: lightgreen;
-}
-
-.movie-info span.orange {
-  color: orange;
-}
-
-.movie-info span.red {
-  color: red;
+.movie:hover {
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
 }
 
 .overview {

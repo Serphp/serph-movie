@@ -3,7 +3,6 @@ const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.
 const API_IMG = 'https://image.tmdb.org/t/p/w1280'
 const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
 
-getMovies(API_URL);
 async function getMovies(url){
     const res = await fetch(url)
     const data = await res.json();
@@ -20,7 +19,8 @@ movies.forEach((movie) => {
   Select_Movie.classList.add('movie');
 
   Select_Movie.innerHTML = `
-  <article class="grid">
+  <table class="grid">
+  <article>
   <img src="${API_IMG + poster_path}" alt="${title}" width="300">
   <div>
   <h3>${title}</h3>
@@ -31,11 +31,11 @@ movies.forEach((movie) => {
   ${overview}
   </div>
   </article>
+  </table>
   `
   main.appendChild(Select_Movie);
 });
 }
-
 
 function getColor(vote) {
     if(vote >= 8) {
@@ -67,14 +67,15 @@ form.addEventListener('submit', (e) => {
 })
 }
 
+getMovies(API_URL);
+
 function Movies(){
     return (
         <>
         <form id="form">
-        <input type="search" onClick={a} placeholder="Valid" id="search" className="search" aria-invalid="false"></input>
+        <input type="search" onClick={a} placeholder="Search a movie..." id="search" className="search" aria-invalid="false"></input>
         </form>
-        <main id="main">
-        </main>
+        <main id="main"></main>
         </>
     )
 }
