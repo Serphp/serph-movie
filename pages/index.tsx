@@ -7,7 +7,7 @@ const Home = () => {
     
     <>
     <div className='container'>
-      <h1 className="">
+      <h1 className="center">
         Welcome to <a href="https://nextjs.org"> Hola </a>
       </h1>
   </div>

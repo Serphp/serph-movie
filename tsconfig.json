@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/Movies.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/Movies.js", "component/Apim.js", "pages/blog.js"],
   "exclude": ["node_modules"]
 }
