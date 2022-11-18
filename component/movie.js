@@ -1,12 +1,19 @@
+import Apim from "./Apim"
+import Movie from "./Movie"
 
 const Movie = () => {
-//console.log(main)
     return (
-        <main>
-        <h1> Hola </h1>
-
-        
-        </main>
+        <body>
+        <header>
+          <form id="form">
+          <Movie />
+          <Apim />
+          </form>
+        </header>
+    
+        <main id="main"></main>
+    
+      </body>
     )
 }
 
