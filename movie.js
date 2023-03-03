@@ -33,17 +33,17 @@ function showMovies(movies) {
 
         movieEl.innerHTML = `
         <table className="grid">
-        <article class="article"> 
-            <img src="${API_IMG + poster_path}" alt="${title}" width="300">
+        
+            <img class="imgcon" src="${API_IMG + poster_path}" alt="${title}">
             <div class="movie-info">
-        <h3>${title}</h3>
-        <span class="${getColor(vote_average)}">${vote_average}</span>
+            <h3>${title}</h3>
+            <span class="${getColor(vote_average)}">${vote_average}</span>
             </div>
             <div class="overview">
-        <h3>Overview</h3>
+            <h3>Overview</h3>
             ${overview}
-        </div>
-        </article>
+            </div>
+        
         </table>
         `
         main.appendChild(movieEl)
