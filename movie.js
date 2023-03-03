@@ -33,13 +33,18 @@ function showMovies(movies) {
 
         movieEl.innerHTML = `
         <table className="grid">
-        
+            <div class="btn">
+            <a href="https://www.google.com/search?q=${title}" target="_blank">more info 
+            </a>
+            </div>
+
             <img class="imgcon" src="${API_IMG + poster_path}" alt="${title}">
             <div class="movie-info">
-            <h3>${title}</h3>
+            
             <span class="${getColor(vote_average)}">${vote_average}</span>
             </div>
             <div class="overview">
+            <h3>${title}</h3>
             <h3>Overview</h3>
             ${overview}
             </div>
