@@ -19,39 +19,40 @@ async function getMovies(url) {
 function showMovies(movies) {
 
     if (!main) {
-        console.error('Error: No se pudo encontrar el elemento con id "main".');
+        console.error('Error: No se pudo encontrar la pelicula.');
         return;
     }
+
+    if ( movies.length === 0 ) {
+        alert('No se encontraron resultados');
+        return;
+    }
+
 
     main.innerHTML = ''
 
     movies.forEach((movie) => {
         const { title, poster_path, vote_average, overview } = movie
 
-        const movieEl = document.createElement('div')
-        movieEl.classList.add('movie')
+        const movieS = document.createElement('div')
+        movieS.classList.add('movie')
 
-        movieEl.innerHTML = `
+        movieS.innerHTML = `
         <table className="grid">
-            <div class="btn">
-            <a href="https://www.google.com/search?q=${title}" target="_blank">more info 
-            </a>
-            </div>
-
             <img class="imgcon" src="${API_IMG + poster_path}" alt="${title}">
             <div class="movie-info">
             
             <span class="${getColor(vote_average)}">${vote_average}</span>
             </div>
             <div class="overview">
-            <h3>${title}</h3>
+            <h3><a href="https://www.google.com/search?q=${title}" target="_blank">${title}</a></h3>
             <h3>Overview</h3>
             ${overview}
             </div>
         
         </table>
         `
-        main.appendChild(movieEl)
+        main.appendChild(movieS)
     })
 }
 
